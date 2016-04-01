@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701603F31CAE1BBC00F7DB79 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701603F21CAE1BBC00F7DB79 /* AVFoundation.framework */; };
+		701603F91CAE1DA300F7DB79 /* scream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701603F81CAE1DA300F7DB79 /* scream.mp3 */; };
+		701603FD1CAE281900F7DB79 /* Mellowtron.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701603FC1CAE281900F7DB79 /* Mellowtron.mp3 */; };
 		707C54B11CAC829D00961A82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C54B01CAC829D00961A82 /* AppDelegate.swift */; };
 		707C54B31CAC829D00961A82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C54B21CAC829D00961A82 /* ViewController.swift */; };
 		707C54B61CAC829D00961A82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707C54B41CAC829D00961A82 /* Main.storyboard */; };
@@ -15,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701603F21CAE1BBC00F7DB79 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		701603F81CAE1DA300F7DB79 /* scream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scream.mp3; sourceTree = "<group>"; };
+		701603FA1CAE254200F7DB79 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		701603FC1CAE281900F7DB79 /* Mellowtron.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mellowtron.mp3; sourceTree = "<group>"; };
 		707C54AD1CAC829D00961A82 /* SuperCool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperCool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		707C54B01CAC829D00961A82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		707C54B21CAC829D00961A82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,15 +36,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701603F31CAE1BBC00F7DB79 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		701603F51CAE1D3E00F7DB79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				701603FC1CAE281900F7DB79 /* Mellowtron.mp3 */,
+				701603F81CAE1DA300F7DB79 /* scream.mp3 */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		707C54A41CAC829D00961A82 = {
 			isa = PBXGroup;
 			children = (
+				701603FA1CAE254200F7DB79 /* AudioToolbox.framework */,
+				701603F21CAE1BBC00F7DB79 /* AVFoundation.framework */,
 				707C54AF1CAC829D00961A82 /* SuperCool */,
 				707C54AE1CAC829D00961A82 /* Products */,
 			);
@@ -54,6 +73,7 @@
 		707C54AF1CAC829D00961A82 /* SuperCool */ = {
 			isa = PBXGroup;
 			children = (
+				701603F51CAE1D3E00F7DB79 /* Supporting Files */,
 				707C54B01CAC829D00961A82 /* AppDelegate.swift */,
 				707C54B21CAC829D00961A82 /* ViewController.swift */,
 				707C54B41CAC829D00961A82 /* Main.storyboard */,
@@ -96,6 +116,7 @@
 				TargetAttributes = {
 					707C54AC1CAC829D00961A82 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 42NSC68799;
 					};
 				};
 			};
@@ -125,6 +146,8 @@
 				707C54BB1CAC829D00961A82 /* LaunchScreen.storyboard in Resources */,
 				707C54B81CAC829D00961A82 /* Assets.xcassets in Resources */,
 				707C54B61CAC829D00961A82 /* Main.storyboard in Resources */,
+				701603FD1CAE281900F7DB79 /* Mellowtron.mp3 in Resources */,
+				701603F91CAE1DA300F7DB79 /* scream.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +270,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SuperCool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YJC.SuperCool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -258,10 +285,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SuperCool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YJC.SuperCool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -284,6 +315,7 @@
 				707C54C11CAC829D00961A82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
